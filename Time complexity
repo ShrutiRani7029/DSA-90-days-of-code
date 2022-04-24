@@ -1,0 +1,39 @@
+Time Compexity : It ia an amount of time taken by an algorithm. we use it for making better programs and comparision of algorithms.
+we have Big O notation, Theta notation, Omega notation to show time complexity. but in most cases we use big O notation. 
+Big O notation -> show upper bound (worst case compexity), Omega -> lower bound, Theta -> Average.
+Constant Time : o(1) = for(i=0;i<5;i++)cout<<"shruti"; -> it print shruti at 5 times.
+Linear Time   : o(n) = for(i=0;i<n;i++)cout<<"shruti"; -> it print shruti at n times.
+Logarithmic Time : o(logn) = binary search
+Quadratic Time : o(n^2) = nested loop -> for(i=0;i<n;i++){for(j=0;j<n;j++) cout<"*";}
+Cubic Time : o(n^3) = 3 nested loops.
+Order of Time complexity : o(1)<o(logn)<o(n)<o(nlogn)<o(n^2)<o(n^3)<o(2^n)<o(n!).
+let see questions : remember that igonore lower degree & constants of function, q1) f(n)= 2n^2+3n => o(n^2) q2) 4n^4+3n^3 => o(n^4) q3) n^2+logn => o(n^2) q4) 45 => o(1) 
+Q) REVERSE THE ARRAY :
+#include<bits/stdc++.h>
+using namespace std;
+void reverse(int arr[],int n)
+{
+    int start=0;
+    int end=n-1;
+    while(start<=end)
+    {
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }
+}
+void print(int arr[],int n)
+{
+    for(int i=0;i<n;i++)
+        cout<<arr[i]<<" ";
+    cout<<endl;
+}
+int main()
+{
+    int arr[6]={1,2,4,5,3,7};
+    reverse(arr,6);
+    print(arr,6);
+}
+if length of array = n. then no. of swaps = n/2 so, complexity = o(n/2) = o(n).
+
+
