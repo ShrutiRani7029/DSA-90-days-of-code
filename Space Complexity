@@ -1,0 +1,31 @@
+Space Complexity : It represents the memory taken by a program as a function of length of the input.
+/*int a=0,b=0;
+for(i=0;i<n;i++)
+{
+    a=a+rand();
+}
+for(j=0;j<m;j++)
+{
+    b=b+rand();
+}*/ --> here, only variables are declared, so its space complexity is constant. --> o(1)
+// Normal variable : o(1) complexity.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+ int arr[5]={1,2,3,4,5};//array ki size fixed hai i.e., 5 so, s.c=o(1)
+ for(int i=0;i<n;i++)
+ cout<<arr[i]<<" ";
+}
+/* vector<int>v(n);//length=n,
+then its s.c=o(n)*/
+/*vector<int>v(n);
+for()
+{
+for()
+{}}
+so its space complexity is o(n) and time complexity is o(n^2), space complexity only represent the memory and in this code vector takes memory and for loop takes time.
+*/
+
+
+
