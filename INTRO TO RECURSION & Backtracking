@@ -1,0 +1,11 @@
+RECURSION: Function calls itself directly or indirectly, 
+Three components :  (i)Base Condition - To stop the execution of Recursive Call we apply base condition. (ii)Logic (iii)Recursive Call.
+e.g., 
+$ find n!, where n=5 -------------// we know that 1!=1 & 0!=1 so our base condn is if(n<=1) return 1;
+$- code: int fact(int n)
+{
+if(n<=1) return 1;//BASE CONDITION
+else return n*fact(n-1);// RECURSIVE CALL
+// LOGIC : 5!=5*4*3*2*1 =5*(5-1)*(5-2)*(5-3)*(5-4)/// LOGIC : N*(N-1)!
+$ FIND FIBONACCI OF N, where n=4-----------------//fibonacci series = 0,1,1,2,3,5
+
