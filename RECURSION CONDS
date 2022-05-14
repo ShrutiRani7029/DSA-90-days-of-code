@@ -1,0 +1,119 @@
+/////////////////////////////////////////////////////RECURSION///////////////////////////////////////////////
+The function will be completed by going
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int cot=0;
+void f()
+{
+if(cot==4)
+return;
+cout<<cot<<endl; /// 0 1 2 3
+cot++;
+f();
+}
+int main()
+{
+f();
+}
+///print shruti n times.
+
+#include<bits/stdc++.h>///tc=O(n), sc=O(n).
+using namespace std;
+void f(int i, int n)
+{
+    if(i>n)return;
+    cout<<"shruti"<<endl;
+    f(i+1,n);///f(1,4),f(2,4),f(3,4),f(4,4) ///f(5,4)->return.
+}
+int main()
+{
+    int n;
+    cin>>n;///4
+    f(1,n);
+}
+    or
+    
+#include<bits/stdc++.h>
+using namespace std;
+string name="shruti";
+int c=0;
+void f()
+{
+   if(c==5)return;
+   cout<<name<<endl;
+   c++;
+   f();
+
+}
+int main()
+{
+    f();
+}
+
+///print from 1 to n
+/*#include<bits/stdc++.h>
+using namespace std;
+void f(int i,int n)
+{
+  if(i>n) return;
+  cout<<i<<endl;
+  f(i+1,n);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    f(1,n);
+}*/
+
+///print from n to 1
+#include<bits/stdc++.h>
+using namespace std;
+void f(int i,int n)
+{
+    if(i<1)return;
+    cout<<i<<endl;
+    f(i-1,n);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int i=n;
+    f(i,n);
+}
+////////////////////////////////////////////////////////////BACKTRACKING//////////////////////////////////////////////////////////////////////
+The function will be called while returning---------------
+
+///PRINT FROM 1 TO N USING BACKTRACKING
+/*#include<bits/stdc++.h>
+using namespace std;
+void f(int i, int n)
+{
+    if(i<1)return;
+    f(i-1,n);///1 tk -1 ho gya ... 1,2,3,4,5
+    cout<<i<<endl;
+}
+int main()
+{
+    int n;//5
+    cin>>n;
+    f(n,n);
+}*/
+///PRINT FROM N TO 1 USING BACKTRACKING
+#include<bits/stdc++.h>
+using namespace std;
+void f(int i, int n)
+{
+    if(i>n)return;
+    f(i+1,n);///increases till n so sequence => 5,4,3,2,1
+    cout<<i<<endl;
+}
+int main()
+{
+    int n;
+    cin>>n;//5
+    f(1,n);
+ }
